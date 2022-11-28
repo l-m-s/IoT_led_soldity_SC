@@ -1,0 +1,232 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "SendPaymentToContract",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "sufficient",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "contractBalance",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getBalanceOwner",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCurrentAddress",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "kill",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ledStatus",
+				"outputs": [
+					{
+						"internalType": "int8",
+						"name": "",
+						"type": "int8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "readLed",
+				"outputs": [
+					{
+						"internalType": "int8",
+						"name": "",
+						"type": "int8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieveEther",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int8",
+						"name": "newOn",
+						"type": "int8"
+					}
+				],
+				"name": "setLed",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnerShip",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:dev-run-script": "./scripts/deploy_with_ethers.ts",
+			"details": "Interact with Smart Contract",
+			"kind": "dev",
+			"methods": {
+				"kill()": {
+					"details": "to kill the contract from the blockchain"
+				},
+				"readLed()": {
+					"details": "Return value ",
+					"returns": {
+						"_0": "'ledStatus' status of the led 1 is on 0 is off"
+					}
+				},
+				"retrieveEther()": {
+					"details": "Returns the ether value "
+				},
+				"setLed(int8)": {
+					"details": "Store value in Blockchain",
+					"params": {
+						"newOn": "1 - toturn led on  0 - turn led off  "
+					}
+				},
+				"transferOwnerShip(address)": {
+					"details": "transfers the ownership of the contract "
+				}
+			},
+			"title": "IoT-Smart Contract",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"SendPaymentToContract()": {
+					"notice": "function testSend() public payable { owner.transfer(msg.value); } function test2Send() public payable { contractBalance.transfer(msg.value); }"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/led_contract.sol": "led_contract"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interface_led.sol": {
+			"keccak256": "0xeb38eac460e42b6941141f1c1e3f2d89b33ec98302d2d04a719fc9d491a38c14",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://6a2248479be33bb82eb21c77ad554a59f276aa9a13fd3bc8970ebaab56542ef0",
+				"dweb:/ipfs/QmUGFDUiApbcXk1tGevXhcg8BmRWm1jPjM6DQipfeaYaNx"
+			]
+		},
+		"contracts/led_contract.sol": {
+			"keccak256": "0x7c6f42b478fb544fd7cf668cc217a8e34f588ff6688d7ea77e69ae757dec55bf",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://33447d33fbb3aaef7c367fb2d9055dd3548de24122dd8567afd198c3f9ac94cd",
+				"dweb:/ipfs/QmSg4aTpi42Ej9upge1peo97VSF8RZSzjXxE1XDPaZECKd"
+			]
+		}
+	},
+	"version": 1
+}

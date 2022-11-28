@@ -1,0 +1,107 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "kill",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "readLed",
+				"outputs": [
+					{
+						"internalType": "int8",
+						"name": "",
+						"type": "int8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "retrieveEther",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int8",
+						"name": "newOn",
+						"type": "int8"
+					}
+				],
+				"name": "setLed",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "decleares all specified functions ",
+			"kind": "dev",
+			"methods": {
+				"kill()": {
+					"details": "only owner can execute"
+				},
+				"readLed()": {
+					"details": "Return value ",
+					"returns": {
+						"_0": "value of 'number'"
+					}
+				},
+				"retrieveEther()": {
+					"details": "only Owner can execute"
+				},
+				"setLed(int8)": {
+					"details": "Store value in Blockchain ",
+					"params": {
+						"newOn": "what does it do ?"
+					}
+				}
+			},
+			"title": "IoT functions Interface ",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/interface_led.sol": "InterfaceLED"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/interface_led.sol": {
+			"keccak256": "0xc9bb753b4220b4c14b0b7f61240f32b6d1ee503c2ec1169f5e920ae3f98bb381",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://9c30ddedcbd148d27a80836e3dbdcc51faa6f6d033b6064b38f21cff04903660",
+				"dweb:/ipfs/QmSrnHUSRpABYxkVnhGqhzVGte5XRpm6FGtLpqpGzbzcsd"
+			]
+		}
+	},
+	"version": 1
+}
