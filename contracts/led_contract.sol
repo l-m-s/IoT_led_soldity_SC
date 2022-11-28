@@ -12,11 +12,11 @@ contract led_contract is led_interface {
 
     address payable private owner;
     int8 public ledStatus;
-    address payable public contractBalance;
+    address public contractAddress;
 
     constructor(){
         owner = payable(msg.sender);
-
+        contractAddress = address(this);
     }
 
     /**
@@ -27,26 +27,12 @@ contract led_contract is led_interface {
         require( newOn == 1 || newOn ==0, "only 0 or 1 as parameter for the setLed function");
         ledStatus = newOn;
         //owner.transfer(msg.value);
-        getCurrentAddress().transfer(msg.value);
-    }
-    /**
-    function testSend() public payable {
         owner.transfer(msg.value);
-    }
-     function test2Send() public payable {
-        contractBalance.transfer(msg.value);
-    }
-    */
-
-
-    function SendPaymentToContract() public payable returns(bool sufficient) {
-            getCurrentAddress().transfer(msg.value);
-            return true;
     }
 
     function getCurrentAddress() public view returns (address payable){
           return payable(address(this));
-        }
+    }
 
     /**
      * @dev Return value 
@@ -60,16 +46,14 @@ contract led_contract is led_interface {
      * @dev Returns the ether value 
      */
     function retrieveEther() public override onlyOwner{
-        require (address(this).balance > 0, "no ehter in contract");
-        //address memory payable sendto = payable(msg.sender);
-        payable(msg.sender).transfer(address(this).balance);
+
     }
 
+    
     /**
      * @dev to kill the contract from the blockchain
      */
     function kill() public override onlyOwner{
-        selfdestruct(contractBalance);
         selfdestruct(owner);
     }
 
@@ -77,9 +61,6 @@ contract led_contract is led_interface {
         return owner;
     }
 
-    function getBalance() public view returns(uint){
-        return contractBalance.balance;
-    }
 
     function getBalanceOwner() public view returns(uint){
         return owner.balance;

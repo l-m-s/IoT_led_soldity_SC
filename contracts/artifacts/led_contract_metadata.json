@@ -12,38 +12,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "SendPaymentToContract",
+				"name": "contractAddress",
 				"outputs": [
 					{
-						"internalType": "bool",
-						"name": "sufficient",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "payable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "contractBalance",
-				"outputs": [
-					{
-						"internalType": "address payable",
+						"internalType": "address",
 						"name": "",
 						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -187,11 +161,7 @@
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {
-				"SendPaymentToContract()": {
-					"notice": "function testSend() public payable { owner.transfer(msg.value); } function test2Send() public payable { contractBalance.transfer(msg.value); }"
-				}
-			},
+			"methods": {},
 			"version": 1
 		}
 	},
@@ -220,11 +190,11 @@
 			]
 		},
 		"contracts/led_contract.sol": {
-			"keccak256": "0x7c6f42b478fb544fd7cf668cc217a8e34f588ff6688d7ea77e69ae757dec55bf",
+			"keccak256": "0xf8bc0db6d0c53c29cd0eb9f4b73fd05f3f147ffb4b2f116c746276a12355eb8f",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://33447d33fbb3aaef7c367fb2d9055dd3548de24122dd8567afd198c3f9ac94cd",
-				"dweb:/ipfs/QmSg4aTpi42Ej9upge1peo97VSF8RZSzjXxE1XDPaZECKd"
+				"bzz-raw://472b3e372437f2d2842e749333021f5f7b0410af171666c21d9cf1312ec11c30",
+				"dweb:/ipfs/QmaaeNfxXUwdtEBKobKA9mbxwbDGgYa9QLKBxTLhww1JYK"
 			]
 		}
 	},
