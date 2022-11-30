@@ -1,18 +1,18 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity >=0.7.0 <0.9.0;
+pragma solidity ^0.8.0;
 
 import "./interface_led.sol";
 /**
  * @title IoT-Smart Contract
- * @dev Interact with Smart Contract
- * @custom:dev-run-script ./scripts/deploy_with_ethers.ts
+ * @dev Sets led in Smart Contract
  */
 contract led_contract is led_interface {
 
     address payable private owner;
     int8 public ledStatus;
     address public contractAddress;
+
 
     constructor(){
         owner = payable(msg.sender);
@@ -26,11 +26,14 @@ contract led_contract is led_interface {
     function setLed(int8 newOn) public override payable {
         require( newOn == 1 || newOn ==0, "only 0 or 1 as parameter for the setLed function");
         ledStatus = newOn;
-        //owner.transfer(msg.value);
         owner.transfer(msg.value);
     }
 
-    function getCurrentAddress() public view returns (address payable){
+    /**
+     * @dev Return  
+     * @return retruns the address of the contract 
+     */
+    function getContractAddress() public view returns (address payable){
           return payable(address(this));
     }
 
@@ -43,10 +46,10 @@ contract led_contract is led_interface {
     }
 
     /**
-     * @dev Returns the ether value 
+     * @dev Returns nothing and is acutly useless
      */
     function retrieveEther() public override onlyOwner{
-
+        
     }
 
     
@@ -57,14 +60,20 @@ contract led_contract is led_interface {
         selfdestruct(owner);
     }
 
+    /**
+     * @dev Returns the address of the current owner of the contract
+     */
     function getOwner() public view returns (address) {
         return owner;
     }
 
-
+    /**
+     * @dev makes sure only the owner can execute it
+     */
     function getBalanceOwner() public view returns(uint){
         return owner.balance;
     }
+
     /**
      * @dev makes sure only the owner can execute it
      */

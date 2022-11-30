@@ -38,7 +38,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "getCurrentAddress",
+				"name": "getContractAddress",
 				"outputs": [
 					{
 						"internalType": "address payable",
@@ -130,10 +130,21 @@
 			}
 		],
 		"devdoc": {
-			"custom:dev-run-script": "./scripts/deploy_with_ethers.ts",
-			"details": "Interact with Smart Contract",
+			"details": "Sets led in Smart Contract",
 			"kind": "dev",
 			"methods": {
+				"getBalanceOwner()": {
+					"details": "makes sure only the owner can execute it"
+				},
+				"getContractAddress()": {
+					"details": "Return  ",
+					"returns": {
+						"_0": "retruns the address of the contract "
+					}
+				},
+				"getOwner()": {
+					"details": "Returns the address of the current owner of the contract"
+				},
 				"kill()": {
 					"details": "to kill the contract from the blockchain"
 				},
@@ -144,7 +155,7 @@
 					}
 				},
 				"retrieveEther()": {
-					"details": "Returns the ether value "
+					"details": "Returns nothing and is acutly useless"
 				},
 				"setLed(int8)": {
 					"details": "Store value in Blockchain",
@@ -190,11 +201,11 @@
 			]
 		},
 		"contracts/led_contract.sol": {
-			"keccak256": "0xf8bc0db6d0c53c29cd0eb9f4b73fd05f3f147ffb4b2f116c746276a12355eb8f",
+			"keccak256": "0xf985798b44e3e53f638aec59fc145a9c586a8353672f4a23698d62c9b90c81f9",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://472b3e372437f2d2842e749333021f5f7b0410af171666c21d9cf1312ec11c30",
-				"dweb:/ipfs/QmaaeNfxXUwdtEBKobKA9mbxwbDGgYa9QLKBxTLhww1JYK"
+				"bzz-raw://d85e0c730f10a792757a55796b69692a7b3b99daca0c0b46ed2452f9aef368bd",
+				"dweb:/ipfs/QmXTGTxL2CDoWTZxNXJNvUGMtEnJDs9sb2zYUiYBrwSQLz"
 			]
 		}
 	},
