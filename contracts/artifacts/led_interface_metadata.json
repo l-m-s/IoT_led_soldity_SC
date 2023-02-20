@@ -56,7 +56,7 @@
 				"readLed()": {
 					"details": "Return value ",
 					"returns": {
-						"_0": "value of 'number'"
+						"_0": "value of the LED "
 					}
 				},
 				"retrieveEther()": {
@@ -65,7 +65,7 @@
 				"setLed(int8)": {
 					"details": "Store value in Blockchain ",
 					"params": {
-						"newOn": "what does it do ?"
+						"newOn": "value set for the LED"
 					}
 				}
 			},
@@ -95,11 +95,11 @@
 	},
 	"sources": {
 		"contracts/interface_led.sol": {
-			"keccak256": "0xeb38eac460e42b6941141f1c1e3f2d89b33ec98302d2d04a719fc9d491a38c14",
+			"keccak256": "0x8fabfb62ed7e08bb52d3a042df5e67b8c98ca8b3413d7c903d8f4ef7de1d6f4a",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://6a2248479be33bb82eb21c77ad554a59f276aa9a13fd3bc8970ebaab56542ef0",
-				"dweb:/ipfs/QmUGFDUiApbcXk1tGevXhcg8BmRWm1jPjM6DQipfeaYaNx"
+				"bzz-raw://d3567c57f445910c77449c3ef4071dff9e246e7687bda5addda92e874296c128",
+				"dweb:/ipfs/QmcesvHwVHcFej9WZywS3pgUcmEaU2tjjKLWaNNohGzDpb"
 			]
 		}
 	},

@@ -11,13 +11,13 @@ interface led_interface {
 
     /**
      * @dev Store value in Blockchain 
-     * @param newOn what does it do ?
+     * @param newOn value set for the LED
      */
     function setLed(int8 newOn) external payable;
-    
+
     /**
      * @dev Return value 
-     * @return value of 'number'
+     * @return value of the LED 
      */
     function readLed() external view returns (int8);
 

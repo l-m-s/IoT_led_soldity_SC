@@ -11,12 +11,13 @@ contract led_contract is led_interface {
 
     address payable private owner;
     int8 public ledStatus;
-    address public contractAddress;
 
-
+    /**
+     * @dev sets the owner of the contract
+     * 
+     */
     constructor(){
         owner = payable(msg.sender);
-        contractAddress = address(this);
     }
 
     /**
@@ -52,7 +53,6 @@ contract led_contract is led_interface {
         
     }
 
-    
     /**
      * @dev To kill the contract from the blockchain
      */
