@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.7+commit.e28d00a7"
+		"version": "0.8.17+commit.8df45f5f"
 	},
 	"language": "Solidity",
 	"output": {
@@ -155,7 +155,7 @@
 					}
 				},
 				"retrieveEther()": {
-					"details": "Returns nothing and is acutly useless"
+					"details": "Returns Ether that was send to the contract"
 				},
 				"setLed(int8)": {
 					"details": "Store value in Blockchain",
@@ -201,11 +201,11 @@
 			]
 		},
 		"contracts/led_contract.sol": {
-			"keccak256": "0xf985798b44e3e53f638aec59fc145a9c586a8353672f4a23698d62c9b90c81f9",
+			"keccak256": "0x84c6d4163a94adf2fff2eccdf773f7bb1cb9c9b202f8afa5a598d92493bc8644",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d85e0c730f10a792757a55796b69692a7b3b99daca0c0b46ed2452f9aef368bd",
-				"dweb:/ipfs/QmXTGTxL2CDoWTZxNXJNvUGMtEnJDs9sb2zYUiYBrwSQLz"
+				"bzz-raw://06be152b9cc10291bbca19792c32056bb98abb73cd12ca79ee8ea7fa05662a03",
+				"dweb:/ipfs/Qmd3KVcjVmRNnebakKXun5aJH5dxJv3zPvXaC7aHEZYpY9"
 			]
 		}
 	},

@@ -20,17 +20,16 @@ contract led_contract is led_interface {
     }
 
     /**
-     * @dev Store value in Blockchain
+     * @dev Stores value in Blockchain
      * @param newOn 1 - toturn led on  0 - turn led off  
      */
     function setLed(int8 newOn) public override payable {
         require( newOn == 1 || newOn ==0, "only 0 or 1 as parameter for the setLed function");
         ledStatus = newOn;
-        owner.transfer(msg.value);
     }
 
     /**
-     * @dev Return  
+     * @dev Return
      * @return retruns the address of the contract 
      */
     function getContractAddress() public view returns (address payable){
@@ -46,15 +45,16 @@ contract led_contract is led_interface {
     }
 
     /**
-     * @dev Returns nothing and is acutly useless
+     * @dev Returns Ether that was send to the contract
      */
     function retrieveEther() public override onlyOwner{
+        payable(msg.sender).transfer(address(this).balance);
         
     }
 
     
     /**
-     * @dev to kill the contract from the blockchain
+     * @dev To kill the contract from the blockchain
      */
     function kill() public override onlyOwner{
         selfdestruct(owner);
@@ -65,13 +65,6 @@ contract led_contract is led_interface {
      */
     function getOwner() public view returns (address) {
         return owner;
-    }
-
-    /**
-     * @dev makes sure only the owner can execute it
-     */
-    function getBalanceOwner() public view returns(uint){
-        return owner.balance;
     }
 
     /**
