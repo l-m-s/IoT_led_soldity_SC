@@ -25,10 +25,10 @@ contract led_contract is led_interface {
      * @param newOn 1 - toturn led on  0 - turn led off  
      */
     function setLed(int8 newOn) public override payable {
-        require( newOn == 1 || newOn ==0, "only 0 or 1 as parameter for the setLed function");
+        require( newOn == 1 || newOn ==0, "only 0 or 1 as parameter");
         ledStatus = newOn;
     }
-
+               
     /**
      * @dev Return
      * @return retruns the address of the contract 
@@ -50,9 +50,8 @@ contract led_contract is led_interface {
      */
     function retrieveEther() public override onlyOwner{
         payable(msg.sender).transfer(address(this).balance);
-        
     }
-
+ 
     /**
      * @dev To kill the contract from the blockchain
      */

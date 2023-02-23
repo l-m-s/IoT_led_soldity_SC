@@ -7,8 +7,6 @@ pragma solidity ^0.8.0;
  * @dev decleares all specified functions 
  */
 interface led_interface {
-
-
     /**
      * @dev Store value in Blockchain 
      * @param newOn value set for the LED
@@ -19,16 +17,15 @@ interface led_interface {
      * @dev Return value 
      * @return value of the LED 
      */
-    function readLed() external view returns (int8);
-
+    function readLed() external view returns (int8);   
 
     /**
-     * @dev only Owner can execute
+     * @dev only owner can execute
      */
     function retrieveEther() external;
 
     /**
-     * @dev only owner can execute
+     * @dev only owner can execute this
      */
     function kill() external;
 

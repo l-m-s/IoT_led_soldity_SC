@@ -12,32 +12,6 @@
 			},
 			{
 				"inputs": [],
-				"name": "contractAddress",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getBalanceOwner",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
 				"name": "getContractAddress",
 				"outputs": [
 					{
@@ -133,11 +107,11 @@
 			"details": "Sets led in Smart Contract",
 			"kind": "dev",
 			"methods": {
-				"getBalanceOwner()": {
-					"details": "makes sure only the owner can execute it"
+				"constructor": {
+					"details": "sets the owner of the contract "
 				},
 				"getContractAddress()": {
-					"details": "Return  ",
+					"details": "Return",
 					"returns": {
 						"_0": "retruns the address of the contract "
 					}
@@ -146,7 +120,7 @@
 					"details": "Returns the address of the current owner of the contract"
 				},
 				"kill()": {
-					"details": "to kill the contract from the blockchain"
+					"details": "To kill the contract from the blockchain"
 				},
 				"readLed()": {
 					"details": "Return value ",
@@ -158,7 +132,7 @@
 					"details": "Returns Ether that was send to the contract"
 				},
 				"setLed(int8)": {
-					"details": "Store value in Blockchain",
+					"details": "Stores value in Blockchain",
 					"params": {
 						"newOn": "1 - toturn led on  0 - turn led off  "
 					}
@@ -193,19 +167,19 @@
 	},
 	"sources": {
 		"contracts/interface_led.sol": {
-			"keccak256": "0xeb38eac460e42b6941141f1c1e3f2d89b33ec98302d2d04a719fc9d491a38c14",
+			"keccak256": "0xf36a2b383ebfd141ba65e5284d0e86425f1db2e8858868f7e52884a213fdf6cb",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://6a2248479be33bb82eb21c77ad554a59f276aa9a13fd3bc8970ebaab56542ef0",
-				"dweb:/ipfs/QmUGFDUiApbcXk1tGevXhcg8BmRWm1jPjM6DQipfeaYaNx"
+				"bzz-raw://e2e2ab378a9d55f71611d15a6541fb4d1d301336302b0c0149d4685f82d6bd8c",
+				"dweb:/ipfs/QmR4TgzsfMpzDPgTZogCCi6ZccvTzZHd3iptt579nSzVZH"
 			]
 		},
 		"contracts/led_contract.sol": {
-			"keccak256": "0x84c6d4163a94adf2fff2eccdf773f7bb1cb9c9b202f8afa5a598d92493bc8644",
+			"keccak256": "0xbfe99ebfa5e5e595c2f6f8cefe607e8a96cdd64291f8c3f3097f844cad71b15e",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://06be152b9cc10291bbca19792c32056bb98abb73cd12ca79ee8ea7fa05662a03",
-				"dweb:/ipfs/Qmd3KVcjVmRNnebakKXun5aJH5dxJv3zPvXaC7aHEZYpY9"
+				"bzz-raw://4cd2a0369dee33245f8124022903944e1161059236eda6cf7491a807326ef9f3",
+				"dweb:/ipfs/QmSNLjZiFvvpea3uBXJNnmEgZU1xMFiT6jGSFG2VPynbL5"
 			]
 		}
 	},
